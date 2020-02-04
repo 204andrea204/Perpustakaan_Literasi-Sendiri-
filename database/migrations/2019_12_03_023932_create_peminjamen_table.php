@@ -20,12 +20,8 @@ class CreatePeminjamenTable extends Migration
             $table->string('judulbuku');
             $table->string('tanggalpinjam');
             $table->string('tanggalkembali')->nullable();
-            $table->string('denda')->nullable();
             $table->string('statuspeminjaman');
             $table->timestamps();
-
-            // $table->foreign("denda_id")->references("id")->on("dendas")->onUpdate("cascade")->onDelete("cascade");
-            // $table->bigInteger('denda_id')->unsigned();
         });
     }
 
