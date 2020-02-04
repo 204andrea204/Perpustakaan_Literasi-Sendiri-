@@ -1,0 +1,30 @@
+.card-img-top1 {
+    width: 100% !important;
+    height: 50% !important;
+    object-fit: cover !important;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.row1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    margin-left: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.app-search1 {
+    margin-top: 18px;
+    position: relative;
+    background-color: #5cf2fa;
+}
+
+.card-body-book {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    width: 80%;
+}
