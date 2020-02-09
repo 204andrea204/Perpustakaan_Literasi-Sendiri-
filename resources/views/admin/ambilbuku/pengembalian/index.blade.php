@@ -39,7 +39,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card m-b-30">
-            <div class="card-body">
+            <div class="card-body"> 
 
                 <h4 class="mt-0 header-title">Buku Yang Terpinjam</h4>
                 <p class="text-muted m-b-30 font-14">
@@ -64,11 +64,11 @@
                             <td>{{ $loop->iteration }}</td>
                               <td>{{$q->namapeminjam}}</td>
                               <td>{{$q->alamatpeminjam}}</td>
-                              <td>{{$q->judulbuku}}</td>
+                              <td>{{$q->buku->judulbuku}}</td>
                               <td>{{$q->tanggalpinjam}}</td>
                               <td>{{$q->tanggalkembali}}</td>
-                                        <td>
-                                <a href="#" class="btn btn-outline-primary">Kembalikan 
+                            <td>
+                                <a href="/ambilbuku/kembalikan/{{$q->id}}" class="btn btn-outline-primary">Kembalikan 
                                 </a>
                             </td>
                         </tr>

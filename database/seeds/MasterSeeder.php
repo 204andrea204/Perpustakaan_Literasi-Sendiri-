@@ -15,7 +15,8 @@ class MasterSeeder extends Seeder
         	'nama' => 'Cerita Rakyat'
             ]);
         DB::table('dendas')->insert([
-        	'denda' => '0'
+        	'kategori_denda' => 'Reguler',
+            'denda' => '1000'
         	]);
     }
 }

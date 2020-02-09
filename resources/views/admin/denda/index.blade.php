@@ -13,7 +13,11 @@
         <form action="/denda/add" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">denda</label>
+            <label for="recipient-name" class="col-form-label">Kategori Denda</label>
+            <input type="text" class="form-control" name="kategori_denda" id="recipient-name" required="">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Denda</label>
             <input type="text" class="form-control" name="denda" id="recipient-name" required="">
           </div>
       <div class="modal-footer">
@@ -105,7 +109,8 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama denda Buku</th>
+                            <th>Kategori Denda</th>
+                            <th>Denda</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -114,6 +119,7 @@
                         @foreach($denda as $j)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
+                            <td>{{$j->kategori_denda}}</td>
                             <td>{{$j->denda}}</td>
                             <td>
                                 <a data-toggle="modal" data-target="#EditJurusan{{$j->id}}" class="btn btn-outline-warning">

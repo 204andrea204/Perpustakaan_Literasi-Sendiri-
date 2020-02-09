@@ -10,4 +10,8 @@ class Buku extends Model
 	{
     	return $this->belongsTo(Kategori::class, 'kategori_id');
 	}
+	public function denda()
+	{
+    	return $this->belongsTo(Denda::class, 'denda_id');
+	}
 }

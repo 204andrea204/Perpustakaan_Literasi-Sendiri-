@@ -15,7 +15,8 @@ class CreateDendasTable extends Migration
     {
         Schema::create('dendas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('denda');
+            $table->string('kategori_denda');
+            $table->double('denda');
             $table->timestamps();
         });
     }

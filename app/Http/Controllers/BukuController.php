@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Kategori;
 use App\Buku;
+use App\Denda;
 
 class BukuController extends Controller
 {
@@ -12,6 +13,7 @@ class BukuController extends Controller
    	{
    		$d['kategoris'] = Kategori::all();
         $d['bukus'] = Buku::all();
+        $d['dendas'] = Denda::all();
    		return view("admin.buku.index", $d);
    	}
     public function laporan()
@@ -21,7 +23,8 @@ class BukuController extends Controller
    	public function add()
    	{	
    		$kategori = Kategori::all();
-   		return view('admin.buku.add', compact('kategori'));
+        $denda = Denda::all();
+   		return view('admin.buku.add', compact('kategori','denda'));
    	}
    	public function tambah(Request $r){
         $buku = new Buku;
@@ -30,6 +33,7 @@ class BukuController extends Controller
         $buku->pembuat = $r->pembuat;
         $buku->deskripsi = $r->deskripsi;
         $buku->stok = $r->stok;
+        $buku->denda_id = $r->denda_id;
 
         if ($r->hasFile('isi')) {
             $file = $r->file('isi');
@@ -52,6 +56,7 @@ class BukuController extends Controller
     public function edit($id){
         $d['kategoris'] = Kategori::all();
         $d['bukus'] = Buku::find($id);
+        $d['dendas'] = Denda::all();
         return view('admin.buku.edit', $d);
     }
 
@@ -62,6 +67,7 @@ class BukuController extends Controller
         $buku->pembuat = $r->pembuat;
         $buku->deskripsi = $r->deskripsi;
         $buku->stok = $r->stok;
+        $buku->denda_id = $r->denda_id;
 
         if ($r->hasFile('isi')) {
             $file = $r->file('isi');

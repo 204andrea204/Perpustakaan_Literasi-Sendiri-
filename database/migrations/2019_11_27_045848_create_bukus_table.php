@@ -16,6 +16,7 @@ class CreateBukusTable extends Migration
         Schema::create('bukus', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('kategori_id')->unsigned();
+            $table->bigInteger('denda_id')->unsigned();
             $table->string('judulbuku');
             $table->string('pembuat');
             $table->string('deskripsi');
@@ -27,6 +28,7 @@ class CreateBukusTable extends Migration
 
 
             $table->foreign("kategori_id")->references("id")->on("kategoris")->onUpdate("cascade")->onDelete("cascade");
+            $table->foreign("denda_id")->references("id")->on("dendas")->onUpdate("cascade")->onDelete("cascade");
         });
     }
 

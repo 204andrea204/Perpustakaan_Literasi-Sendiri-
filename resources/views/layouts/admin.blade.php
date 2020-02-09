@@ -84,8 +84,13 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-broadcast"></i> <span> Peminjaman Buku </span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="/ambilbuku/pinjam">Pinjam Buku</a></li>
+                                    <li><a href="#">Laporan Pengembalian Buku</a></li>
+                                </ul>
+                            </li>
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-broadcast"></i> <span> Pengembalian Buku </span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="list-unstyled">
                                     <li><a href="/ambilbuku/kembali">Pengembalian Buku</a></li>
-                                    <li><a href="#">Laporan Peminjaman Buku</a></li>
                                     <li><a href="#">Laporan Pengembalian Buku</a></li>
                                 </ul>
                             </li>

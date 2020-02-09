@@ -25,12 +25,14 @@
                 <form action="/buku/update" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="id" value="{{$bukus->id}}">
+                    <p>Judul Buku</p>
                     <input type="text" name="judulbuku" class="form-control" placeholder="Judul Buku" required="" value="{{$bukus->judulbuku}}"><br>
 
                     <div class="row">
                             <div class="col-12 col-md-6">
+                                <p>Kategori Buku</p>
                                 <select class="form-control" name="kategori_id" required="">
-                                        <option selected>Pilih Mapel......</option>
+                                        <option selected>Pilih Kategori.....</option>
                                         @foreach($kategoris as $j)
                                         @if($j->id == $bukus->kategori_id)
                                         <option value="{{$j->id}}" selected>{{$j->nama}}</option>
@@ -42,16 +44,32 @@
                             </div>
 
                             <div class="col-12 col-md-6">
+                            <p>Stok</p>
                             <input type="text" name="stok" class="form-control" placeholder="Stok Buku" required="" value="{{$bukus->stok}}"><br>
                             </div>
                     </div>
+                    <div class="col-12 col-md-6">
+                        <p>Denda</p>
+                                <select class="form-control" name="denda_id" required="">
+                                        <option selected>Pilih Denda......</option>
+                                        @foreach($dendas as $j)
+                                        @if($j->id == $bukus->denda_id)
+                                        <option value="{{$j->id}}" selected>{{$j->kategori_denda}} = {{$j->denda}}</option>
+                                        @else
+                                        <option value="{{$j->id}}">{{$j->kategori_denda}} = {{$j->denda}}</option>
+                                        @endif
+                                        @endforeach
+                                    </select>   
+                            </div>
+                            <p>Pembuat Buku</p>
                     <input type="text" name="pembuat" class="form-control" placeholder="Pembuat Buku" required="" value="{{$bukus->pembuat}}"><br>
+                    <p>Isi Buku</p>
                     <input type="file" name="isi" class="form-control" placeholder="Isi Buku" value="{{$bukus->isi}}" src="{{url('isibuku/'. $bukus->isi)}}"><br>
 
-
+                    <p>Deskripsi</p>
                     <textarea name="deskripsi" placeholder="Keterangan" class="form-control" required="">{{$bukus->deskripsi}}</textarea><br>
 
-
+                    <p>Gambar Buku</p>
                     <input type="file" name="gambar" class="form-control" placeholder="Foto Buku" value="{{$bukus->gambar}}"><br>
                     <center><br>
                     <div class="form-group col-md-12">

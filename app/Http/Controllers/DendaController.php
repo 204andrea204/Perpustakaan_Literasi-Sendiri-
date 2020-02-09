@@ -15,6 +15,7 @@ class DendaController extends Controller
     public function add(Request $r)
     {
     	$denda = new Denda;
+        $denda->kategori_denda = $r->kategori_denda;
         $denda->denda = $r->denda;
         $denda->save();
         return redirect('/denda');
@@ -25,6 +26,7 @@ class DendaController extends Controller
     }
     public function update(Request $r){
         $denda = Denda::find($r->id);
+        $denda->kategori_denda = $r->kategori_denda;
         $denda->denda = $r->denda;
         $denda->save();
         return redirect('/denda');

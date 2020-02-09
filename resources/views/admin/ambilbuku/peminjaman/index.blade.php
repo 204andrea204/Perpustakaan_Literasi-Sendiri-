@@ -56,7 +56,6 @@
                             <th>Tanggal Pinjam</th>
                             <th>Tanggal Pengembalian</th>
                             <th>Status</th>
-                            <th>Aksi</th>
                         </tr>
                     </thead>
                     @foreach($peminjamen as $s)
@@ -64,15 +63,10 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{$s->namapeminjam}}</td>
-                            <td>{{$s->judulbuku}}</td>
+                            <td>{{$s->buku->judulbuku}}</td>
                             <td>{{$s->tanggalpinjam}}</td>
                             <td>{{$s->tanggalkembali}}</td>
                             <td>Belum Dikembalikan</td>
-                            <td>
-                                <a href="#" class="btn btn-outline-warning">
-                                    <i class="far fa-edit"></i>
-                                </a>
-                            </td>
                         </tr>
                         @endforeach
                     </tbody>

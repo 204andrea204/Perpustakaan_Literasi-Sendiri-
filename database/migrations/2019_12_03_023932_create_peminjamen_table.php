@@ -17,11 +17,13 @@ class CreatePeminjamenTable extends Migration
             $table->bigIncrements('id');
             $table->string('namapeminjam');
             $table->string('alamatpeminjam');
-            $table->string('judulbuku');
+            $table->bigInteger('buku_id')->unsigned();
             $table->string('tanggalpinjam');
             $table->string('tanggalkembali')->nullable();
             $table->string('statuspeminjaman');
             $table->timestamps();
+
+            $table->foreign("buku_id")->references("id")->on("bukus")->onUpdate("cascade")->onDelete("cascade");
         });
     }
 

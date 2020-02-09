@@ -30,13 +30,13 @@
                     
                     <div class="row">
                             <div class="col-12 col-md-6">
-                                <select class="form-control" name="judulbuku" required="">
+                                <select class="form-control" name="buku_id" required="">
                                         <option value="">Pilih buku</option>
                                         <?php
                                             $buku = \App\Buku::all();
                                         ?>
                                          @foreach($buku as $q)
-                                        <option value="{{$q->judulbuku}}">{{$q->judulbuku}}</option>
+                                        <option value="{{$q->id}}">{{$q->judulbuku}}</option>
                                         @endforeach
                                     </select>
                             </div>

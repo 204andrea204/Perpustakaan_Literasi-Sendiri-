@@ -10,4 +10,8 @@ class pengembalian extends Model
 	{
     	return $this->belongsTo(peminjaman::class, 'peminjaman_id');
 	}
+	public function buku()
+	{
+    	return $this->belongsTo(Buku::class, 'buku_id');
+	}
 }

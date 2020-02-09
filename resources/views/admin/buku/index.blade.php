@@ -52,6 +52,7 @@
                             <th>No</th>
                             <th>Judul Buku</th>
                             <th>Kategori Buku</th>
+                            <th>Denda Buku</th>
                             <th>Stok Buku</th>
                             <th>isi</th>
                             <th>gambar</th>
@@ -64,6 +65,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{$s->judulbuku}}</td>
                             <td>{{$s->kategori->nama}}</td>
+                            <td>{{$s->denda->kategori_denda}}:{{$s->denda->denda}}</td>
                             <td>{{$s->stok}}</td>
                             <td>{{$s->isi}}</td>
                             <td><img src="{{ asset('gambar/'.$s->gambar) }}" style="width: 50px;height: 50px;"></td>

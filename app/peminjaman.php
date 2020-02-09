@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class peminjaman extends Model
 {
-    public function denda()
+    public function buku()
 	{
-    	return $this->belongsTo(Denda::class, 'denda_id');
+    	return $this->belongsTo(Buku::class, 'buku_id');
 	}
 }
