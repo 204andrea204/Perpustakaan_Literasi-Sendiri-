@@ -18,5 +18,18 @@ class MasterSeeder extends Seeder
         	'kategori_denda' => 'Reguler',
             'denda' => '1000'
         	]);
+
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('admin'),
+            'role' => '1'
+            ]);
+         DB::table('users')->insert([
+            'name' => 'user',
+            'email' => 'user@gmail.com',
+            'password' => bcrypt('user'),
+            'role' => '2'
+            ]);
     }
 }

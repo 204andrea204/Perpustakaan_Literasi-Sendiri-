@@ -21,18 +21,18 @@ class PageController extends Controller
     	$password = $r->password;
     	if (Auth::attempt(['email' => $name, 'password' => $password]) || Auth::attempt(['name' => $name, 'password' => $password])){
     		if (Auth::user()->role == "1"){
-    			return view('/admin');
+    			return view('/admin/index');
     		}
             if (Auth::user()->role == "2"){
-    			return view('/user');
+    			return view('/user/index');
     		}
             
     	}
     		return redirect('/not_found/404.jpg');
     }
-    public function logout()
+    public function logout(Request $request)
     {
         Auth::logout();
-        return redirect('/userlogin/login');
+        return redirect('/login/login');
     }
 }

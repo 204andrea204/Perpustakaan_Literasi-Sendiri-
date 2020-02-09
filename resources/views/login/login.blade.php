@@ -79,7 +79,7 @@
                     <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 form-login" align="center">
                         <img src="/foto/user.png" class="logo"><br>
                         <h2 align="center" class="text-grey text-light">Silakan Login</h2><br>
-                        <form method="POST" action="/loginuser/proses-login">
+                        <form method="POST" action="/login/proses-login">
                             @csrf
 
                             <div class="form-group">
