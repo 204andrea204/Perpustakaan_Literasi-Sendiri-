@@ -1,0 +1,17 @@
+install Ckeditor:
+	composer require unisharp/laravel-ckeditor
+
+pasang ini di config/app.php
+	composer require unisharp/laravel-ckeditor
+
+Jalan kan ini di apk:
+	php artisan vendor:publish --tag=ckeditor
+
+Taro script ini :
+
+   <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+    <script>
+        $('textarea').ckeditor();
+        // $('.textarea').ckeditor(); // if class is prefered.
+    </script>

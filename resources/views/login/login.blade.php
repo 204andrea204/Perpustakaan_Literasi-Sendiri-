@@ -13,7 +13,7 @@
         <!-- Theme style -->
 
         <link href="/login-template/Universitas Trilogi_files/login-v2.css" rel="stylesheet" type="text/css">
-        <link rel="icon" type="img/png" href="/foto/user.png" sizes="16x16">
+        <link rel="icon" type="img/png" href="/Universitas Trilogi_files/logo.png" sizes="16x16">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <!-- Custom fonts for this template-->
@@ -27,11 +27,11 @@
           <![endif]-->
         <style type="text/css">
             .login-page .form-box .univ-identity-box{
-                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/foto/pos.jpg') bottom;
+                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/foto/kasir1.jpg') bottom;
                 background-size:cover;
             }
             html, body{
-                background-image: url('/foto/dd.jpg');
+                background-image: url('/foto/perpus.jpg');
                 background-size: cover;
             }
             .password{
@@ -71,13 +71,13 @@
                             <div class="univ-text">
                                 <h4 class="welcome text-light">Selamat Datang</h4>
                                 <div class="clearfix"></div>
-                                <h2 class="no-margin text-light">P O S</h2>
+                                <h2 class="no-margin text-light">P E R L I T</h2>
                                 <h3 class="no-margin"><b>Andrea</b></h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 form-login" align="center">
-                        <img src="/foto/user.png" class="logo"><br>
+                        <img src="foto/logo.png" class="logo"><br>
                         <h2 align="center" class="text-grey text-light">Silakan Login</h2><br>
                         <form method="POST" action="/login/proses-login">
                             @csrf

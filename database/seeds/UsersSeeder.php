@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class MasterSeeder extends Seeder
+class UsersSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,14 +11,6 @@ class MasterSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('kategoris')->insert([
-        	'nama' => 'Cerita Rakyat'
-            ]);
-        DB::table('dendas')->insert([
-        	'kategori_denda' => 'Reguler',
-            'denda' => '1000'
-        	]);
-
         DB::table('users')->insert([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
