@@ -30,9 +30,10 @@ class PageController extends Controller
     	}
     		return redirect('/not_found/404.jpg');
     }
+    
     public function logout(Request $request)
     {
         Auth::logout();
-        return redirect('/login/login');
+        return redirect('/login');
     }
 }

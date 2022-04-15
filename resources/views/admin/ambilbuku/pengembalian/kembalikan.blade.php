@@ -29,10 +29,8 @@
     <div class="col-12 col-md-3">
         <div class="card m-b-30">
             <div class="card-body">
-                <h5 class="card-title">{{ $peminjaman->buku->judulbuku }}</h5>
-                <p class="card-text">{{ $peminjaman->buku->pembuat }}</p>
-                <p class="card-text">{{ $peminjaman->buku->isi }}</p>
-                <p class="card-text">{{ $peminjaman->buku->deskripsi }}</p>
+                <h5 class="card-title">Judul Buku : {{ $peminjaman->buku->judulbuku }}</h5>
+                <p class="card-text">Pembuat Buku : {{ $peminjaman->buku->pembuat }}</p>
             </div>
         </div>
     </div>
@@ -43,7 +41,7 @@
             </div>
             <div class="card-body">
                 <p class="card-text">Nama Peminjam : {{ $peminjaman->namapeminjam }}</p>
-                <p class="card-text">Alamat : {{ $peminjaman->namapeminjam }}</p>
+                <p class="card-text">Alamat : {{ $peminjaman->alamatpeminjam }}</p>
                 <p class="card-text">Tanggal Meminjam : {{ $peminjaman->tanggalpinjam }}</p>
                 <p class="card-text">Tanggal Kembali : {{ $peminjaman->tanggalkembali }}</p>
 

@@ -11,20 +11,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login.login');
 });
 Route::prefix('login')->group(function(){
     Route::get('/', 'PageController@login');
     Route::get('/register', 'PageController@register');
-    Route::get('/logout', 'PageController@logout');
     Route::post('/proses-login', 'PageController@proses_login');
     Route::post('/proses-register', 'PageController@proses_register');
 });
 
 
+Route::get('/logout', 'UserController@logout');
 Route::group(['middleware' => 'admin'], function(){
     Route::get('/admin', function () {
         return view('admin.index');
+        });
+    Route::get('/buatuser', function () {
+        return view('admin.buatuser.index');
         });
     Route::get('/kategori', function () {
         return view('admin.kategori.index');
@@ -36,6 +39,14 @@ Route::group(['middleware' => 'admin'], function(){
     Route::get('/pinjem', function () {
         return view('admin.ambilbuku.peminjaman.add');
         });
+    Route::prefix('buatuser')->group(function() {
+        Route::get('/', 'UserController@index');
+        Route::get('/add', 'UserController@add');
+        Route::post('/tambah', 'UserController@tambah');
+        Route::get('/edit/{id}', 'UserController@edit');
+        Route::post('/update', 'UserController@update');
+        Route::get('/delete/{id}', 'UserController@delete');
+        });
     Route::prefix('buku')->group(function() {
         Route::get('/', 'BukuController@index');
         Route::get('/laporan', 'BukuController@laporan');
@@ -44,6 +55,14 @@ Route::group(['middleware' => 'admin'], function(){
         Route::get('/edit/{id}', 'BukuController@edit');
         Route::post('/update', 'BukuController@update');
         Route::get('/hapus/{id}', 'BukuController@hapus');
+        });
+    Route::prefix('artikel')->group(function() {
+        Route::get('/', 'ArtikelController@index');
+        Route::get('/add', 'ArtikelController@add');
+        Route::post('/tambah', 'ArtikelController@tambah');
+        Route::get('/edit/{id}', 'ArtikelController@edit');
+        Route::post('/update', 'ArtikelController@update');
+        Route::get('/hapus/{id}', 'ArtikelController@hapus');
         });
     Route::prefix('kategori')->group(function() {
         Route::get('/', 'KategoriController@index');
@@ -75,9 +94,14 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('/user', function () {
         return view('user.index');
     });
-    Route::get('/artikel', function () {
-        return view('user.artikel.index');
-    });
+    Route::prefix('artikel')->group(function() {
+        Route::get('/', 'ArtikelController@index');
+        Route::get('/add', 'ArtikelController@add');
+        Route::post('/tambah', 'ArtikelController@tambah');
+        Route::get('/edit/{id}', 'ArtikelController@edit');
+        Route::post('/update', 'ArtikelController@update');
+        Route::get('/hapus/{id}', 'ArtikelController@hapus');
+        });
     Route::prefix('dabuku')->group(function() {
         Route::get('/', 'DabukuController@index');
         Route::get('/bacabuku/{isi}', 'DabukuController@bacabuku');

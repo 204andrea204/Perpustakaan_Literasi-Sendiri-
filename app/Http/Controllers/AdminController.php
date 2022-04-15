@@ -8,6 +8,7 @@ use App\peminjaman;
 use App\pengembalian;
 use Carbon\Carbon;
 use App\Denda;
+use Auth;
 
 use DateTime;
 
@@ -41,7 +42,7 @@ class AdminController extends Controller
 		$pem->statuspeminjaman = 1;
 		$pem->save();
 
-		$getid = \App\Buku::where('id',$r->input('buku_id'))->value('id');
+		$getid = \App\Buku::find($r->input('buku_id'))->id;
 		$stok = \App\Buku::find($getid);
 		$stok->stok -= 1;
 		$stok->save();

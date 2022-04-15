@@ -20,18 +20,11 @@
                 <div class="mini-stat-icon">
                     <i class="mdi mdi-cube-outline float-right mb-0"></i>
                 </div>
-                <h6 class="text-uppercase mb-0">New Orders</h6>
+                <h6 class="text-uppercase mb-0">User</h6>
             </div>
             <div class="card-body">
                 <div class="border-bottom pb-4">
                     <span class="badge badge-success"> +11% </span> <span class="ml-2 text-muted">From previous period</span>
-                </div>
-                <div class="mt-4 text-muted">
-                    <div class="float-right">
-                        <p class="m-0">Last : 1325</p>
-                    </div>
-                    <h5 class="m-0">1456<i class="mdi mdi-arrow-up text-success ml-2"></i></h5>
-
                 </div>
             </div>
         </div>
@@ -42,18 +35,11 @@
                 <div class="mini-stat-icon">
                     <i class="mdi mdi-account-network float-right mb-0"></i>
                 </div>
-                <h6 class="text-uppercase mb-0">New Users</h6>
+                <h6 class="text-uppercase mb-0">Buku</h6>
             </div>
             <div class="card-body">
                 <div class="border-bottom pb-4">
                     <span class="badge badge-success"> +22% </span> <span class="ml-2 text-muted">From previous period</span>
-                </div>
-                <div class="mt-4 text-muted">
-                    <div class="float-right">
-                        <p class="m-0">Last : 3426</p>
-                    </div>
-                    <h5 class="m-0">3567<i class="mdi mdi-arrow-up text-success ml-2"></i></h5>
-
                 </div>
             </div>
         </div>
@@ -64,18 +50,11 @@
                 <div class="mini-stat-icon">
                     <i class="mdi mdi-tag-text-outline float-right mb-0"></i>
                 </div>
-                <h6 class="text-uppercase mb-0">Average Price</h6>
+                <h6 class="text-uppercase mb-0">Pengembalian Buku</h6>
             </div>
             <div class="card-body">
                 <div class="border-bottom pb-4">
                     <span class="badge badge-danger"> -02% </span> <span class="ml-2 text-muted">From previous period</span>
-                </div>
-                <div class="mt-4 text-muted">
-                    <div class="float-right">
-                        <p class="m-0">Last : 15.8</p>
-                    </div>
-                    <h5 class="m-0">14.5<i class="mdi mdi-arrow-down text-danger ml-2"></i></h5>
-
                 </div>
             </div>
         </div>
@@ -86,100 +65,67 @@
                 <div class="mini-stat-icon">
                     <i class="mdi mdi-cart-outline float-right mb-0"></i>
                 </div>
-                <h6 class="text-uppercase mb-0">Total Sales</h6>
+                <h6 class="text-uppercase mb-0">Peminjaman Buku</h6>
             </div>
             <div class="card-body">
                 <div class="border-bottom pb-4">
                     <span class="badge badge-success"> +10% </span> <span class="ml-2 text-muted">From previous period</span>
                 </div>
-                <div class="mt-4 text-muted">
-                    <div class="float-right">
-                        <p class="m-0">Last : 14256</p>
-                    </div>
-                    <h5 class="m-0">15234<i class="mdi mdi-arrow-up text-success ml-2"></i></h5>
-
-                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-12">
-        <div class="card m-b-30">
-            <div class="card-body">
 
-                <h4 class="mt-0 header-title">Default Datatable</h4>
-                <p class="text-muted m-b-30 font-14">
-                    Data Data
-                </p>
+                            <div class="row">
+                                <div class="col-xl-8">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <h4 class="mt-0 header-title">Perpustakaan</h4>
 
-                <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
+                                            <ul class="list-inline widget-chart m-t-20 text-center">
+                                                <li>
+                                                    <h4 class=""><b>3652</b></h4>
+                                                    <p class="text-muted m-b-0">Buku</p>
+                                                </li>
+                                                <li>
+                                                    <h4 class=""><b>5421</b></h4>
+                                                    <p class="text-muted m-b-0">Last week</p>
+                                                </li>
+                                                <li>
+                                                    <h4 class=""><b>9652</b></h4>
+                                                    <p class="text-muted m-b-0">Last Month</p>
+                                                </li>
+                                            </ul>
 
-                    <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>
-                                <a href="#" class="btn btn-outline-warning">
-                                    <i class="far fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-danger">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
+                                            <div id="morris-area-example" style="height: 300px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <h4 class="mt-0 header-title">Perpustakaan</h4>
 
-                        <tr>
-                            <td>Cara Stevens</td>
-                            <td>Sales Assistant</td>
-                            <td>New York</td>
-                            <td>46</td>
-                            <td>2011/12/06</td>
-                            <td>
-                                <a href="#" class="btn btn-outline-warning">
-                                    <i class="far fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-danger">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>27</td>
-                            <td>2011/01/25</td>
-                            <td>
-                                <a href="#" class="btn btn-outline-warning">
-                                    <i class="far fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-danger">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
-    </div>
-    <!-- end col -->
-</div>
+                                            <ul class="list-inline widget-chart m-t-20 text-center">
+                                                <li>
+                                                    <h4 class=""><b>5248</b></h4>
+                                                    <p class="text-muted m-b-0">Buku</p>
+                                                </li>
+                                                <li>
+                                                    <h4 class=""><b>321</b></h4>
+                                                    <p class="text-muted m-b-0">Last week</p>
+                                                </li>
+                                                <li>
+                                                    <h4 class=""><b>964</b></h4>
+                                                    <p class="text-muted m-b-0">Last Month</p>
+                                                </li>
+                                            </ul>
+                                            <div id="morris-bar-example" style="height: 300px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
 
 @endsection
